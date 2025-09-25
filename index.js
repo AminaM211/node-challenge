@@ -5,7 +5,7 @@ const app = express();
 const port = 3000;
 
 let messages = [ 
-    "Hello World",
+    "Hello Samplats",
     "Hello Again",
     "Hello Once More"
 ];

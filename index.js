@@ -2,7 +2,10 @@ const express = require('express');
 const logger = require('./middelware/logger');
 const e = require('express');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000; // Render gebruikt PORT, lokaal 3000
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
 const messagesRouter = require('./routers/v1/messages');
 
 app.use("/api/v1/messages", messagesRouter);
